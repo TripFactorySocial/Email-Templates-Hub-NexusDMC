@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script
-      type="text/javascript"
-      src="/___vscode_livepreview_injected_script"
-    ></script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Travel Package Email Template</title>
-    <style>
+
+    <!-- SECTION outline css (Header/ Heading/ Call to action/ Footer) -->
+    <style type="text/css">
       .footer-stack {
         text-align: left;
         width: 33%;
@@ -21,14 +19,8 @@
           text-align: center !important;
           padding: 5px 0 !important;
         }
-
-        .mobile-padding {
-          padding-left: 20px !important;
-          padding-right: 20px !important;
-        }
       }
-    </style>
-    <style>
+
       /* Outlook link fix */
       #outlook a {
         padding: 0;
@@ -59,10 +51,76 @@
         display: inline-block;
       }
 
+      /* Mobile header specific styles */
+      .header-container {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .logo-container {
+        text-align: left;
+      }
+
+      .contact-container {
+        text-align: right;
+      }
+
+      @media screen and (max-width: 600px) {
+        .header-container {
+          text-align: center !important;
+          padding: 0 20px !important;
+        }
+
+        .logo-container {
+          text-align: center !important;
+          margin: 0 auto !important;
+          padding-bottom: 15px !important;
+          width: 100% !important;
+          display: block !important;
+        }
+
+        .contact-info {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+          padding-right: 0 !important;
+          margin: 0 auto !important;
+        }
+
+        .contact-container {
+          text-align: center !important;
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .contact-table {
+          margin: 0 auto !important;
+          width: auto !important;
+          float: none !important;
+          display: table !important; /* Force table display */
+        }
+
+        .stacked-mobile-contact {
+          margin: 5px auto 12px auto !important;
+          float: none !important;
+          clear: both !important;
+          display: table !important;
+        }
+
+        .email-contact {
+          margin-top: 5px !important;
+        }
+
+        .mobile-header-padding {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+      }
+
       /* MOBILE STYLES */
       @media screen and (max-width: 600px) {
-        .email-container {
-          width: 100% !important;
+        .mobile-padding-fix {
+          padding: 0 !important;
         }
 
         .fluid {
@@ -82,11 +140,6 @@
           width: 100% !important;
         }
 
-        .mobile-padding {
-          padding-left: 20px !important;
-          padding-right: 20px !important;
-        }
-
         .no-padding-mobile {
           padding: 0 !important;
         }
@@ -100,7 +153,7 @@
         }
 
         .mobile-logo {
-          margin: 0 auto 15px auto !important;
+          margin: 0 auto 20px auto !important;
           width: 50% !important;
           height: auto !important;
         }
@@ -111,6 +164,7 @@
           width: 100% !important;
           max-width: 100% !important;
           direction: ltr !important;
+          margin-bottom: 15px !important;
         }
 
         .stack-column-center {
@@ -181,9 +235,9 @@
           max-width: 100% !important;
         }
 
-        .mobile-padding {
-          padding-left: 10px !important;
-          padding-right: 10px !important;
+        .footer-padding-fix {
+          padding-left: 5% !important;
+          padding-right: 5% !important;
         }
 
         .center-on-mobile {
@@ -191,9 +245,144 @@
           margin: 0 auto !important;
         }
       }
+
+      body,
+      table,
+      td,
+      p,
+      a,
+      li,
+      blockquote {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        display: block;
+      }
+
+      table {
+        border-collapse: collapse !important;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      /* Main container */
+      .email-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Card styles */
+      .card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 2px solid #dddddd; /* Added thicker border around the card */
+        margin-bottom: 12px; /* Added 12px bottom margin for gap between cards */
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Optional: added subtle shadow for depth */
+      }
+
+      /* Add space for stacked cards */
+      .card-container {
+        margin-bottom: 12px; /* Added extra space for gap between stacked cards */
+        padding-bottom: 12px; /* Added padding for more separation */
+        border-bottom: 12px solid transparent; /* Added border-bottom of 12px as requested */
+      }
     </style>
+    <!-- SECTION cards-grid-1x3 styles -->
     <style type="text/css">
-      /* Reset styles for email clients */
+      /* Outlook link fix */
+      #outlook a {
+        padding: 0;
+      }
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* Gmail blue links */
+      u + #body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      /* Button fix - Gmail */
+      .btn {
+        display: inline-block;
+      }
+
+      /* Base styles that work across email clients */
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        -webkit-text-size-adjust: none;
+        font-family: "Century Gothic", Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      table {
+        border-spacing: 0;
+        mso-table-lspace: 0;
+        mso-table-rspace: 0;
+      }
+
+      table td {
+        border-collapse: collapse;
+        mso-line-height-rule: exactly;
+      }
+
+      td img {
+        -ms-interpolation-mode: bicubic;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        display: block !important;
+        border: 0;
+      }
+
+      td p {
+        margin: 0;
+        padding: 0;
+      }
+
+      td div {
+        margin: 0;
+        padding: 0;
+      }
+
+      td a {
+        text-decoration: none;
+        color: inherit;
+      }
+
       body,
       table,
       td,
@@ -315,17 +504,23 @@
       .card {
         background-color: #ffffff;
         border-radius: 8px;
-        border: 2px solid #dddddd; /* Added thicker border around the card */
-        margin-bottom: 12px; /* Added 12px bottom margin for gap between cards */
+        border: 2px solid #dddddd;
+        /* Added thicker border around the card */
+        margin-bottom: 12px;
+        /* Added 12px bottom margin for gap between cards */
         overflow: hidden;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Optional: added subtle shadow for depth */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        /* Optional: added subtle shadow for depth */
       }
 
       /* Add space for stacked cards */
       .card-container {
-        margin-bottom: 12px; /* Added extra space for gap between stacked cards */
-        padding-bottom: 12px; /* Added padding for more separation */
-        border-bottom: 12px solid transparent; /* Added border-bottom of 12px as requested */
+        margin-bottom: 12px;
+        /* Added extra space for gap between stacked cards */
+        padding-bottom: 12px;
+        /* Added padding for more separation */
+        border-bottom: 12px solid transparent;
+        /* Added border-bottom of 12px as requested */
       }
 
       .duration-tag {
@@ -450,6 +645,13 @@
         }
       }
     </style>
+    <!--[if mso]>
+      <style type="text/css">
+        .fallback-font {
+          font-family: Arial, sans-serif;
+        }
+      </style>
+    <![endif]-->
   </head>
   <body>
     <!-- SECTION HEADER -->
@@ -459,246 +661,174 @@
       cellpadding="0"
       border="0"
       width="100%"
-      style="max-width: 800px; margin: 0 auto"
-      style="background-color: #ffffff; margin: 0 auto"
+      style="max-width: 800px; margin: 0 auto; background-color: #ffffff"
     >
-      <tbody>
-        <tr>
-          <td style="padding: 20px 0px 0 0px" class="mobile-padding">
-            <table
-              role="presentation"
-              cellspacing="0"
-              cellpadding="0"
-              border="0"
-              width="100%"
-            >
-              <tbody>
-                <tr>
-                  <!-- Logo section -->
-                  <td class="stack-column-center" width="20%">
-                    <table
-                      role="presentation"
-                      cellspacing="0"
-                      cellpadding="0"
-                      border="0"
-                      width="100%"
-                    >
-                      <tbody>
-                        <tr>
-                          <td
-                            style="padding: 0 0 10px 0; text-align: left"
-                            class="mobile-center"
-                          >
-                            <a href="https://www.nexusdmc.com/" target="_blank">
-                              <img
-                                src="https://cdn.yourholiday.me/static/dynimg/partner/98/300x150/3182372-3182371_nexusdmc_hrz_blk.png"
-                                alt="NexusDMC Logo"
-                                class="fluid mobile-logo"
-                                style="
-                                  max-width: 220px;
-                                  height: auto;
-                                  display: inline-block;
-                                "
-                                width="200"
-                              />
-                            </a>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                  <!-- SECTION Phone -->
-                  <td width="50%" class="stack-column-center">
-                    <table
-                      role="presentation"
-                      cellspacing="0"
-                      cellpadding="0"
-                      border="0"
-                      width="100%"
-                    >
-                      <tbody>
-                        <tr>
-                          <td
-                            style="padding: 0; text-align: right"
-                            class="mobile-center"
-                          >
-                            <table
-                              role="presentation"
-                              cellspacing="0"
-                              cellpadding="0"
-                              border="0"
-                              style="margin: 0 0 0 auto"
-                              class="mobile-center"
-                            >
-                              <tbody>
-                                <tr>
-                                  <td
-                                    style="
-                                      border-radius: 30px;
-                                      text-align: center;
-                                    "
-                                    class="mobile-button"
-                                  >
-                                    <a
-                                      href="tel:080 4710 4721"
-                                      style="
-                                        color: #003c67;
-                                        font-family: Century Gothic, Arial,
-                                          sans-serif;
-                                        font-size: 18px;
-                                        font-weight: bold;
-                                        text-decoration: none;
-                                        border-radius: 30px;
-                                        padding: 12px 25px;
-                                        display: inline-block;
-                                      "
-                                    >
-                                      <table
-                                        role="presentation"
-                                        cellspacing="0"
-                                        cellpadding="0"
-                                        border="0"
-                                        style="margin: 0 auto"
-                                      >
-                                        <tbody>
-                                          <tr>
-                                            <td
-                                              width="50%"
-                                              class="stack-column-center"
-                                              style="vertical-align: middle"
-                                            >
-                                              <table
-                                                role="presentation"
-                                                cellpadding="0"
-                                                cellspacing="0"
-                                                border="0"
-                                                align="right"
-                                                class="mobile-center"
-                                                style="
-                                                  margin: 0;
-                                                  text-align: right;
-                                                "
-                                              >
-                                                <tbody>
-                                                  <tr>
-                                                    <td
-                                                      style="
-                                                        padding-bottom: 6px;
-                                                      "
-                                                    >
-                                                      <a
-                                                        href="tel:08047104721"
-                                                        style="
-                                                          display: inline-flex;
-                                                          align-items: center;
-                                                          gap: 8px;
-                                                          font-family: Century
-                                                              Gothic,
-                                                            Arial, sans-serif;
-                                                          font-size: 16px;
-                                                          font-weight: bold;
-                                                          color: #003c67;
-                                                          text-decoration: none;
-                                                          padding-bottom: 10px;
-                                                        "
-                                                      >
-                                                        <img
-                                                          src="https://img.icons8.com/?size=20&id=9730&format=png&color=003c67"
-                                                          alt="Phone Icon"
-                                                          width="20"
-                                                          height="20"
-                                                          style="
-                                                            display: inline-block;
-                                                          "
-                                                        />
-                                                        080 4710 4721
-                                                      </a>
-                                                    </td>
-                                                  </tr>
-                                                  <tr>
-                                                    <td>
-                                                      <a
-                                                        href="mailto:contact@nexusdmc.com"
-                                                        style="
-                                                          display: inline-flex;
-                                                          align-items: center;
-                                                          gap: 8px;
-                                                          font-family: Century
-                                                              Gothic,
-                                                            Arial, sans-serif;
-                                                          font-size: 16px;
-                                                          font-weight: bold;
-                                                          color: #003c67;
-                                                          text-decoration: none;
-                                                        "
-                                                      >
-                                                        <img
-                                                          src="https://img.icons8.com/?size=20&id=499&format=png&color=003c67"
-                                                          alt="Email Icon"
-                                                          width="20"
-                                                          height="20"
-                                                          style="
-                                                            display: inline-block;
-                                                          "
-                                                        />
-                                                        contact@nexusdmc.com
-                                                      </a>
-                                                    </td>
-                                                  </tr>
-                                                </tbody>
-                                              </table>
-                                            </td>
-                                          </tr>
-                                        </tbody>
-                                      </table>
-                                    </a>
-                                  </td>
-                                </tr>
-                              </tbody>
-                            </table>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+      <tr>
+        <td style="padding: 20px 0" class="mobile-padding">
+          <!-- Logo and Contact Info Row -->
+          <table
+            role="presentation"
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            width="100%"
+            class="header-container"
+          >
+            <tr>
+              <!-- Logo cell - no left padding to be flush with edge -->
+              <td
+                width="50%"
+                style="
+                  text-align: left;
+                  vertical-align: top;
+                  padding-left: 15px;
+                "
+                class="stack-column-center logo-container mobile-padding-fix"
+              >
+                <a
+                  href="https://www.nexusdmc.com/"
+                  target="_blank"
+                  style="display: block; margin-left: 0"
+                >
+                  <img
+                    src="https://cdn.yourholiday.me/static/dynimg/partner/98/300x150/3182372-3182371_nexusdmc_hrz_blk.png"
+                    alt="NexusDMC Logo"
+                    class="fluid mobile-logo"
+                    style="
+                      max-width: 220px;
+                      height: auto;
+                      display: inline-block;
+                      margin-left: 0;
+                    "
+                    width="200"
+                  />
+                </a>
+              </td>
 
-            <!-- SECTION BANNER HEADING -->
-            <table
-              border="0"
-              cellpadding="0"
-              cellspacing="0"
-              role="presentation"
-              style="background-color: #003c67"
-              width="100%"
-            >
-              <tbody>
-                <tr>
-                  <td
-                    class="mobile-padding"
-                    style="padding: 16px 40px; text-align: center"
+              <!-- ANCHOR: Contact Info cell -->
+              <td
+                width="50%"
+                style="
+                  text-align: right;
+                  vertical-align: top;
+                  padding-right: 10px;
+                "
+                class="stack-column-center contact-info"
+              >
+                <!-- Contact info container for mobile stacking -->
+                <div class="contact-container">
+                  <!-- Phone row -->
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="right"
+                    style="margin-bottom: 10px; clear: right"
+                    class="contact-table stacked-mobile-contact"
                   >
-                    <h1
-                      style="
-                        color: #ffffff;
-                        font-family: Century Gothic, Arial, sans-serif;
-                        font-size: 28px;
-                        font-weight: bold;
-                        margin: 0;
-                      "
-                    >
-                      NEXUSDMC - Your DMC for Europe
-                    </h1>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </td>
-        </tr>
-      </tbody>
+                    <tr>
+                      <td style="vertical-align: middle; padding-right: 5px">
+                        <img
+                          src="https://img.icons8.com/?size=20&id=9730&format=png&color=003c67"
+                          alt="Phone Icon"
+                          width="20"
+                          height="20"
+                          style="display: inline-block"
+                        />
+                      </td>
+                      <td style="vertical-align: middle">
+                        <a
+                          href="tel:08047104721"
+                          style="
+                            font-family: Century Gothic, Arial, sans-serif;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: #003c67;
+                            text-decoration: none;
+                          "
+                        >
+                          080 4710 4721
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Email row -->
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="right"
+                    class="contact-table stacked-mobile-contact email-contact"
+                    style="clear: right"
+                  >
+                    <tr>
+                      <td style="vertical-align: middle; padding-right: 5px">
+                        <img
+                          src="https://img.icons8.com/?size=20&id=499&format=png&color=003c67"
+                          alt="Email Icon"
+                          width="20"
+                          height="20"
+                          style="display: inline-block"
+                        />
+                      </td>
+                      <td style="vertical-align: middle">
+                        <a
+                          href="mailto:contact@nexusdmc.com"
+                          style="
+                            font-family: Century Gothic, Arial, sans-serif;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: #003c67;
+                            text-decoration: none;
+                          "
+                        >
+                          contact@nexusdmc.com
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <!-- SECTION BANNER HEADING -->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            style="background-color: #003c67; margin-top: 15px"
+            width="100%"
+          >
+            <tbody>
+              <tr>
+                <td
+                  class="mobile-padding"
+                  style="padding: 16px 40px; text-align: center"
+                >
+                  <h1
+                    style="
+                      color: #ffffff;
+                      font-family: Century Gothic, Arial, sans-serif;
+                      font-size: 20px;
+                      font-weight: bold;
+                      margin: 0;
+                    "
+                  >
+                    NexusDMC - Your DMC for Europe
+                  </h1>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
     </table>
+
     <table
       role="presentation"
       cellspacing="0"
@@ -709,8 +839,9 @@
     >
       <tr style="background-color: #ffffff">
         <td style="padding: 10px">
-          <!-- ANCHOR Swiss Paris at a Glance Card -->
+          <!-- ANCHOR div to add spacing in between cards -->
           <div class="card-container">
+            <!-- ANCHOR CARDS TO BE IMPLEMENTED FROM HERE -->
             <table
               role="presentation"
               cellspacing="0"
@@ -5935,11 +6066,13 @@
       border="0"
       width="100%"
       style="max-width: 800px; margin: 0 auto; background-color: #003c67"
-      style="background-color: #ffffff; margin: 0 auto"
     >
       <tbody>
         <tr>
-          <td class="mobile-padding" style="padding: 25px 40px; color: #ffffff">
+          <td
+            class="mobile-padding footer-padding-fix"
+            style="padding: 25px 40px; color: #ffffff"
+          >
             <table
               border="0"
               cellpadding="0"
@@ -5989,6 +6122,7 @@
                       </tbody>
                     </table>
                   </td>
+
                   <!-- Website (center) -->
                   <td
                     class="footer-stack"
@@ -6029,6 +6163,7 @@
                       </tbody>
                     </table>
                   </td>
+
                   <!-- Email (right) -->
                   <td
                     class="footer-stack"
@@ -6076,6 +6211,7 @@
         </tr>
       </tbody>
     </table>
+
     <!-- SECTION UNSUBSCRIBE -->
     <table
       border="0"
