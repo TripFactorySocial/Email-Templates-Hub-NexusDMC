@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Package Email Template</title>
+
+    <!-- SECTION outline css (Header/ Heading/ Call to action/ Footer) -->
+    <style type="text/css">
+      .footer-stack {
+        text-align: left;
+        width: 33%;
+      }
+
+      @media screen and (max-width: 600px) {
+        .footer-stack {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+          padding: 5px 0 !important;
+        }
+      }
+
+      /* Outlook link fix */
+      #outlook a {
+        padding: 0;
+      }
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* Gmail blue links */
+      u + #body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+
+      /* Button fix - Gmail */
+      .btn {
+        display: inline-block;
+      }
+
+      /* Mobile header specific styles */
+      .header-container {
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .logo-container {
+        text-align: left;
+      }
+
+      .contact-container {
+        text-align: right;
+      }
+
+      .stars {
+        /* text-align: right; */
+        font-size: 16px;
+        color: #ffc107;
+        padding-bottom: 5px;
+        /* padding-right: 30px; */
+      }
+
+      @media screen and (max-width: 600px) {
+        .header-container {
+          text-align: center !important;
+          padding: 0 20px !important;
+        }
+
+        .logo-container {
+          text-align: center !important;
+          margin: 0 auto !important;
+          padding-bottom: 15px !important;
+          width: 100% !important;
+          display: block !important;
+        }
+
+        .contact-info {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+          padding-right: 0 !important;
+          margin: 0 auto !important;
+        }
+
+        .contact-container {
+          text-align: center !important;
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .contact-table {
+          margin: 0 auto !important;
+          width: auto !important;
+          float: none !important;
+          display: table !important; /* Force table display */
+        }
+
+        .stacked-mobile-contact {
+          margin: 5px auto 12px auto !important;
+          float: none !important;
+          clear: both !important;
+          display: table !important;
+        }
+
+        .email-contact {
+          margin-top: 5px !important;
+        }
+
+        .mobile-header-padding {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+      }
+
+      /* MOBILE STYLES */
+      @media screen and (max-width: 600px) {
+        .mobile-padding-fix {
+          padding: 0 !important;
+        }
+
+        .fluid {
+          max-width: 100% !important;
+          height: auto !important;
+          margin-left: auto !important;
+          margin-right: auto !important;
+        }
+
+        .mobile-center {
+          text-align: center !important;
+          width: 100% !important;
+        }
+
+        .mobile-stack {
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .no-padding-mobile {
+          padding: 0 !important;
+        }
+
+        .mobile-br {
+          display: none !important;
+        }
+
+        .mobile-button {
+          padding: 12px 25px !important;
+        }
+
+        .mobile-logo {
+          margin: 0 auto 20px auto !important;
+          width: 50% !important;
+          height: auto !important;
+        }
+
+        .stack-column,
+        .stack-column-center {
+          display: block !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          direction: ltr !important;
+          margin-bottom: 15px !important;
+        }
+
+        .stack-column-center {
+          text-align: center !important;
+        }
+
+        .stars {
+          padding-right: 30px;
+        }
+      }
+
+      /* Base styles that work across email clients */
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        display: block !important;
+        min-width: 100% !important;
+        width: 100% !important;
+        -webkit-text-size-adjust: none;
+        font-family: "Century Gothic", Arial, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      table {
+        border-spacing: 0;
+        mso-table-lspace: 0;
+        mso-table-rspace: 0;
+      }
+
+      table td {
+        border-collapse: collapse;
+        mso-line-height-rule: exactly;
+      }
+
+      td img {
+        -ms-interpolation-mode: bicubic;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        margin: auto;
+        display: block !important;
+        border: 0;
+      }
+
+      td p {
+        margin: 0;
+        padding: 0;
+      }
+
+      td div {
+        margin: 0;
+        padding: 0;
+      }
+
+      td a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      /* Main container centered with max-width 800px */
+      .main-container {
+        max-width: 800px !important;
+        width: 100% !important;
+        margin: 0 auto !important;
+        background-color: #ffffff;
+      }
+
+      /* Responsive styles */
+      @media screen and (max-width: 800px) {
+        .container {
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .footer-padding-fix {
+          padding-left: 5% !important;
+          padding-right: 5% !important;
+        }
+
+        .center-on-mobile {
+          text-align: center !important;
+          margin: 0 auto !important;
+        }
+      }
+
+      body,
+      table,
+      td,
+      p,
+      a,
+      li,
+      blockquote {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        display: block;
+      }
+
+      table {
+        border-collapse: collapse !important;
+        mso-table-lspace: 0pt;
+        mso-table-rspace: 0pt;
+      }
+
+      /* Main container */
+      .email-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      /* Card styles */
+      .card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        border: 2px solid #dddddd; /* Added thicker border around the card */
+        margin-bottom: 12px; /* Added 12px bottom margin for gap between cards */
+        overflow: hidden;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Optional: added subtle shadow for depth */
+      }
+
+      /* Add space for stacked cards */
+      .card-container {
+        /* margin-bottom: 12px; Added extra space for gap between stacked cards */
+        /* padding-bottom: 12px; Added padding for more separation */
+        border-bottom: 12px solid transparent; /* Added border-bottom of 12px as requested */
+      }
+    </style>
+
+    <!-- SECTION cards-grid-3x3 styles -->
+    <style>
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        background-color: #f5f5f5;
+        font-family: "Century Gothic", Arial, sans-serif;
+      }
+      .email-container {
+        max-width: 800px;
+        margin: 0px auto;
+        background-color: #ffffff;
+      }
+      .card-col {
+        width: 33.33%;
+        vertical-align: top;
+        padding: 0;
+      }
+      .card-wrapper {
+        padding: 0 5px 20px 5px;
+      }
+      .card-container {
+        /* border: 1px solid #dddddd; */
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 3px 5px rgba(0, 0, 0, 0.05);
+      }
+      .card-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        display: block;
+        border: 0;
+      }
+      .card-title {
+        margin: 0 0 2px 0;
+        font-size: 18px;
+        font-weight: 700;
+        color: #1c1c21;
+      }
+      .card-details {
+        font-size: 11px;
+        color: #617e98;
+        margin-bottom: 16px;
+      }
+      .card-price {
+        font-size: 20px;
+        font-weight: 700;
+        color: #1c1c21;
+      }
+      .card-button {
+        background-color: #003c67;
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 600;
+        text-decoration: none;
+        padding: 10px 0;
+        border-radius: 4px;
+        display: block;
+        text-align: center;
+        width: 100%;
+        margin-top: 15px;
+      }
+      @media screen and (max-width: 768px) {
+        .card-col {
+          width: 100% !important;
+          display: block;
+        }
+      }
+    </style>
+    <!--[if mso]>
+      <style type="text/css">
+        .fallback-font {
+          font-family: Arial, sans-serif;
+        }
+      </style>
+    <![endif]-->
+  </head>
+  <body>
+    <!-- SECTION HEADER -->
+    <table
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      width="100%"
+      style="max-width: 800px; margin: 0 auto; background-color: #ffffff"
+    >
+      <tr>
+        <td style="padding: 20px 0" class="mobile-padding">
+          <!-- Logo and Contact Info Row -->
+          <table
+            role="presentation"
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            width="100%"
+            class="header-container"
+          >
+            <tr>
+              <!-- Logo cell - no left padding to be flush with edge -->
+              <td
+                width="50%"
+                style="
+                  text-align: left;
+                  vertical-align: top;
+                  padding-left: 15px;
+                "
+                class="stack-column-center logo-container mobile-padding-fix"
+              >
+                <a
+                  href="https://www.nexusdmc.com/"
+                  target="_blank"
+                  style="display: block; margin-left: 0"
+                >
+                  <img
+                    src="https://cdn.yourholiday.me/static/dynimg/partner/98/300x150/3182372-3182371_nexusdmc_hrz_blk.png"
+                    alt="NexusDMC Logo"
+                    class="fluid mobile-logo"
+                    style="
+                      max-width: 220px;
+                      height: auto;
+                      display: inline-block;
+                      margin-left: 0;
+                    "
+                    width="200"
+                  />
+                </a>
+              </td>
+
+              <!-- ANCHOR: Contact Info cell -->
+              <td
+                width="50%"
+                style="
+                  text-align: right;
+                  vertical-align: top;
+                  padding-right: 10px;
+                "
+                class="stack-column-center contact-info"
+              >
+                <!-- Contact info container for mobile stacking -->
+                <div class="contact-container">
+                  <!-- Phone row -->
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="right"
+                    style="margin-bottom: 10px; clear: right"
+                    class="contact-table stacked-mobile-contact"
+                  >
+                    <tr>
+                      <td style="vertical-align: middle; padding-right: 5px">
+                        <img
+                          src="https://img.icons8.com/?size=20&id=9730&format=png&color=003c67"
+                          alt="Phone Icon"
+                          width="20"
+                          height="20"
+                          style="display: inline-block"
+                        />
+                      </td>
+                      <td style="vertical-align: middle">
+                        <a
+                          href="tel:08047104721"
+                          style="
+                            font-family: Century Gothic, Arial, sans-serif;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: #003c67;
+                            text-decoration: none;
+                          "
+                        >
+                          080 4710 4721
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+
+                  <!-- Email row -->
+                  <table
+                    role="presentation"
+                    cellspacing="0"
+                    cellpadding="0"
+                    border="0"
+                    align="right"
+                    class="contact-table stacked-mobile-contact email-contact"
+                    style="clear: right"
+                  >
+                    <tr>
+                      <td style="vertical-align: middle; padding-right: 5px">
+                        <img
+                          src="https://img.icons8.com/?size=20&id=499&format=png&color=003c67"
+                          alt="Email Icon"
+                          width="20"
+                          height="20"
+                          style="display: inline-block"
+                        />
+                      </td>
+                      <td style="vertical-align: middle">
+                        <a
+                          href="mailto:contact@nexusdmc.com"
+                          style="
+                            font-family: Century Gothic, Arial, sans-serif;
+                            font-size: 16px;
+                            font-weight: bold;
+                            color: #003c67;
+                            text-decoration: none;
+                          "
+                        >
+                          contact@nexusdmc.com
+                        </a>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </td>
+            </tr>
+          </table>
+
+          <!-- SECTION BANNER HEADING -->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            style="background-color: #003c67; margin-top: 15px"
+            width="100%"
+          >
+            <tbody>
+              <tr>
+                <td
+                  class="mobile-padding"
+                  style="padding: 16px 40px; text-align: center"
+                >
+                  <h1
+                    style="
+                      color: #ffffff;
+                      font-family: Century Gothic, Arial, sans-serif;
+                      font-size: 20px;
+                      font-weight: bold;
+                      margin: 0;
+                    "
+                  >
+                    NexusDMC - Your DMC for Bhutan
+                  </h1>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <table
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      width="100%"
+      class="email-container"
+    >
+      <tr style="background-color: #ffffff">
+        <td style="padding: 10px">
+          <!-- NOTE div to add spacing in between cards -->
+          <div class="card-container">
+            <!-- ANCHOR CARDS TO BE IMPLEMENTED FROM HERE -->
+            <table
+              class="package-grid"
+              cellspacing="0"
+              cellpadding="0"
+              border="0"
+              width="100%"
+            >
+              <!-- SECTION Row 1 -->
+
+              <tr>
+                <!--ANCHOR Mystical Bhutan (04 Nights/ 05 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/destination/74/600x300/3905335-3905334_thimphu-landscape-images_1500x750_0010_bhutan_thimphu_decorative-windowframes-and-shutters-thimphu_istock-1165445839_cr.jpg"
+                            alt="Mystical Bhutan Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">Mystical Bhutan</p>
+                          <p class="stars" width="30%">★★★</p>
+                          <p class="card-details">
+                            Thimphu 1N, Punakha 1N, Paro 2N
+                          </p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting From</span
+                            >
+                            <span class="card-price">₹ 38,799</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.nexusdmc.com/package/mystical-bhutan-4028423"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+
+                <!-- ANCHOR Bhutan: Dragon's Nest (04 Nights/ 05 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/destination/57/600x300/3905089-3905088_paro-landscape-images_1500x750_0004_bhutan_paro_inside-paro-dzong-paro_istock-157316722_credit-stevegeer-on-istock.jpg"
+                            alt="Bhutan: Dragon's Nest Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">Bhutan: Dragon's Nest</p>
+                          <p class="stars" width="30%">★★★★</p>
+                          <p class="card-details">Paro 4N</p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting from</span
+                            >
+                            <span class="card-price">₹ 41,499</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.nexusdmc.com/package/bhutan-dragons-nest-4041220"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+
+                <!-- ANCHOR Royal Bhutan (04 Nights/ 05 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/destination/21/600x300/3905322-3905321_thimphu-landscape-images_1500x750_0005_bhutan_thimphu_capital-city-of-thimphu_istock-1419825442_credit-mtcurado-on-istoc.jpg"
+                            alt="Royal Bhutan Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">Royal Bhutan</p>
+                          <p class="stars" width="30%">★★★</p>
+                          <p class="card-details">Thimphu 2N, Paro 2N</p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting from</span
+                            >
+                            <span class="card-price">₹ 39,299</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.tripfactory.com/package/royal-bhutan-4042266"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <!-- SECTION Row 2 -->
+              <tr>
+                <!-- ANCHOR Trip to Phuntsholing,Thimpu & Paro (05 Nights/ 06 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/destination/38/600x300/1662616-1662615_1jpg.jpg"
+                            alt="Trip to Phuntsholing,Thimpu & Paro Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">Trip to Phuntsholing...</p>
+                          <p class="stars" width="30%">★★★</p>
+                          <p class="card-details">
+                            Phuntsholing 1N, Thimphu 2N,...
+                          </p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting from</span
+                            >
+                            <span class="card-price">₹ 61,099</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.nexusdmc.com/package/trip-to-phuntsholing-thimpu--paro-4013634"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+
+                <!-- ANCHOR Bhutan Family Package (05 Nights/ 06 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/itinerary/7/600x300/1670936-1670935_bhutan-family-package.jpg"
+                            alt="Bhutan Family Package Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">Bhutan Family Package</p>
+                          <p class="stars" width="30%">★★★★</p>
+                          <p class="card-details">Gangtok 3N, Darjeeling 2N</p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting from</span
+                            >
+                            <span class="card-price">₹ 28,899</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.nexusdmc.com/package/bhutan-family-package-41838"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+
+                <!-- ANCHOR 3 Nights Bhutan Package (03 Nights/ 04 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/itinerary/79/600x300/1670922-1670921_3-nights-bhutan-package.jpg"
+                            alt="3 Nights Bhutan Package Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">3 Nights Bhutan Package</p>
+                          <p class="stars" width="30%">★★★★★</p>
+                          <p class="card-details">Thimphu 2N, Paro 1N</p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting from</span
+                            >
+                            <span class="card-price">₹ 11,375</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.nexusdmc.com/package/3-nights-bhutan-package-41737"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+              <!-- SECTION Row 3 -->
+              <tr>
+                <!-- ANCHOR Bhutan 3 Nights Family Package (03 Nights/ 04 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/itinerary/32/600x300/1670924-1670923_bhutan-3-nights-family-package.jpg"
+                            alt="Bhutan 3 Nights Family Package Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">Bhutan 3 Nights Family...</p>
+                          <p class="stars" width="30%">★★★★★</p>
+                          <p class="card-details">Thimphu 2N, Paro 1N</p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting from</span
+                            >
+                            <span class="card-price">₹ 12,950</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.nexusdmc.com/package/bhutan-3-nights-family-package-10347"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+
+                <!-- ANCHOR Bhutan 4 Nights Package (04 Nights/ 05 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/itinerary/62/600x300/1670928-1670927_bhutan-4-nights-package.jpg"
+                            alt="Bhutan 4 Nights Package Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">Bhutan 4 Nights Package</p>
+                          <p class="stars" width="30%">★★★★</p>
+                          <p class="card-details">Thimphu 2N, Paro 2N</p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting from</span
+                            >
+                            <span class="card-price">₹ 16,599</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.nexusdmc.com/package/bhutan-4-nights-package-41722"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+
+                <!-- ANCHOR 4 Nights 5 Days Bhutan Package (04 Nights/ 05 Days) CARD -->
+                <td class="card-col">
+                  <div class="card-wrapper">
+                    <table
+                      class="card-container"
+                      width="100%"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                    >
+                      <tr>
+                        <td align="center">
+                          <img
+                            src="https://cdn.yourholiday.me/static/dynimg/itinerary/31/600x300/1670942-1670941_4-nights-5-days-bhutan-package.jpg"
+                            alt="4 Nights 5 Days Bhutan Package Image"
+                            class="card-image"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td style="padding: 15px">
+                          <p class="card-title">4 Nights 5 Days Bhutan...</p>
+                          <p class="stars" width="30%">★★★★</p>
+                          <p class="card-details">
+                            Phuntsholing 1N, Thimphu 2N, Paro 1N
+                          </p>
+                          <p>
+                            <span style="font-size: 11px; color: #617e98"
+                              >Starting from</span
+                            >
+                            <span class="card-price">₹ 22,399</span>
+                          </p>
+                          <a
+                            target="_blank"
+                            href="https://www.nexusdmc.com/package/4-nights-5-days-bhutan-package-41397"
+                            class="card-button"
+                            >View Details</a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+
+          <!-- ANCHOR Call to action button -->
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            role="presentation"
+            width="100%"
+          >
+            <tbody>
+              <tr>
+                <td
+                  align="center"
+                  style="padding-bottom: 10px; background-color: #ffffff"
+                >
+                  <table
+                    border="0"
+                    cellpadding="0"
+                    cellspacing="0"
+                    role="presentation"
+                  >
+                    <tbody>
+                      <tr>
+                        <td
+                          style="
+                            background-color: #003c67;
+                            border-radius: 4px;
+                            text-align: center;
+                          "
+                        >
+                          <a
+                            class="mobile-button"
+                            href="https://www.nexusdmc.com/cp/bhutan-18169"
+                            style="
+                              background-color: #003c67;
+                              color: #ffffff;
+                              font-family: Century Gothic, Arial, sans-serif;
+                              font-size: 16px;
+                              font-weight: bold;
+                              text-decoration: none;
+                              border-radius: 4px;
+                              padding: 12px 30px;
+                              border: 1px solid #003c67;
+                              display: inline-block;
+                            "
+                            target="_blank"
+                            >Learn More</a
+                          >
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <!-- SECTION FOOTER -->
+    <table
+      role="presentation"
+      cellspacing="0"
+      cellpadding="0"
+      border="0"
+      width="100%"
+      style="max-width: 800px; margin: 0 auto; background-color: #003c67"
+    >
+      <tbody>
+        <tr>
+          <td
+            class="mobile-padding footer-padding-fix"
+            style="padding: 25px 40px; color: #ffffff"
+          >
+            <table
+              border="0"
+              cellpadding="0"
+              cellspacing="0"
+              role="presentation"
+              width="100%"
+            >
+              <tbody>
+                <tr>
+                  <!-- Phone (left) -->
+                  <td class="footer-stack" style="text-align: left" width="33%">
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="display: inline-block"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            style="
+                              vertical-align: middle;
+                              padding-right: 8px;
+                              padding-bottom: 4px;
+                            "
+                          >
+                            <img
+                              alt="Phone Icon"
+                              src="https://img.icons8.com/?size=16&id=y7WNDj08W2eP&format=png&color=FFFFFF"
+                              style="display: inline-block"
+                              width="14"
+                            />
+                          </td>
+                          <td style="vertical-align: middle">
+                            <a
+                              href="tel:080 4710 4721"
+                              style="
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-size: 15px;
+                              "
+                              >080 4710 4721</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+
+                  <!-- Website (center) -->
+                  <td
+                    class="footer-stack"
+                    style="text-align: center"
+                    width="33%"
+                  >
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="display: inline-block"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            style="vertical-align: middle; padding-right: 8px"
+                          >
+                            <img
+                              alt="Globe Icon"
+                              src="https://img.icons8.com/?size=22&id=5561&format=png&color=FFFFFF"
+                              style="display: inline-block"
+                              width="18"
+                            />
+                          </td>
+                          <td style="vertical-align: middle">
+                            <a
+                              href="https://www.nexusdmc.com/"
+                              style="
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-size: 15px;
+                              "
+                              >www.nexusdmc.com</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+
+                  <!-- Email (right) -->
+                  <td
+                    class="footer-stack"
+                    style="text-align: right"
+                    width="33%"
+                  >
+                    <table
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      role="presentation"
+                      style="display: inline-block"
+                    >
+                      <tbody>
+                        <tr>
+                          <td
+                            style="vertical-align: middle; padding-right: 8px"
+                          >
+                            <img
+                              alt="Email Icon"
+                              src="https://img.icons8.com/?size=18&id=499&format=png&color=FFFFFF"
+                              style="display: inline-block"
+                              width="16"
+                            />
+                          </td>
+                          <td style="vertical-align: middle">
+                            <a
+                              href="mailto:contact@nexusdmc.com"
+                              style="
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-size: 15px;
+                              "
+                              >contact@nexusdmc.com</a
+                            >
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- SECTION UNSUBSCRIBE -->
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      role="presentation"
+      style="background-color: #f9f9f9; margin: 0 auto"
+      width="100%"
+      style="max-width: 800px; margin: 0 auto"
+    >
+      <tbody>
+        <tr>
+          <td
+            class="mobile-padding"
+            style="
+              text-align: center;
+              padding: 20px 40px;
+              font-size: 12px;
+              color: #999999;
+              line-height: 1.5;
+            "
+          >
+            <p style="margin: 0 0 10px 0">
+              You're receiving this email because you signed up for updates from
+              NexusDMC.
+            </p>
+            <p style="margin: 0">
+              <a href="#" style="color: #999999; text-decoration: underline"
+                >Unsubscribe</a
+              >
+              |
+              <a href="#" style="color: #999999; text-decoration: underline"
+                >View in Browser</a
+              >
+            </p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
