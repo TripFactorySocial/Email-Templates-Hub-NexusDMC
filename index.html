@@ -1,25 +1,432 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NexusDMC Email Templates</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #f7f7f9;
+        color: #333;
+        line-height: 1.6;
+      }
 
-<body>
-    <article>
-        <a href="./Sikkim-nexusDMC.html" style="text-decoration: none; color: #003c67;">
-            <h1 style="font-size: 24px; font-weight: bold;">Sikkim & Darjeeling</h1>
+      .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        padding: 40px 20px;
+      }
 
-            <a href="./Thailand-nexusDMC.html" style="text-decoration: none; color: #003c67;">
-                <h1 style="font-size: 24px; font-weight: bold;">Thailand</h1>
+      header {
+        text-align: center;
+        margin-bottom: 50px;
+      }
 
-                <a href="./Europe-nexusDMC.html" style="text-decoration: none; color: #003c67;">
-                    <h1 style="font-size: 24px; font-weight: bold;">Europe</h1>
-                    <a href="./Australia-nexusDMC.html" style="text-decoration: none; color: #003c67;">
-                        <h1 style="font-size: 24px; font-weight: bold;">Australia</h1>
-    </article>
-</body>
+      h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #1a1a1a;
+        margin-bottom: 10px;
+      }
 
+      .subtitle {
+        color: #666;
+        font-size: 1.1rem;
+      }
+
+      .sections {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+      }
+
+      .section {
+        background: white;
+        border-radius: 16px;
+        padding: 30px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .section h2 {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin-bottom: 20px;
+        color: #2563eb;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eef2ff;
+      }
+
+      .template-grid {
+        display: grid;
+        gap: 15px;
+      }
+
+      .template-item {
+        background: #f8fafc;
+        padding: 15px 20px;
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all 0.2s ease;
+        text-decoration: none;
+        color: #333;
+      }
+
+      .template-item:hover {
+        background: #eef2ff;
+        transform: translateX(5px);
+      }
+
+      .template-info {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .template-name {
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      .status-badge {
+        font-size: 0.75rem;
+        padding: 4px 10px;
+        border-radius: 20px;
+        font-weight: 500;
+      }
+
+      .status-update {
+        background: #dbeafe;
+        color: #1e40af;
+      }
+
+      .status-create {
+        background: #dcfce7;
+        color: #166534;
+      }
+
+      .destinations-section {
+        margin-top: 50px;
+      }
+
+      .destinations-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+      }
+
+      .region-card {
+        background: white;
+        border-radius: 16px;
+        padding: 25px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .region-card h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+        color: #2563eb;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #eef2ff;
+      }
+
+      .destination-list {
+        list-style: none;
+      }
+
+      .destination-item {
+        padding: 8px 0;
+        color: #333;
+        text-decoration: none;
+        display: block;
+        transition: all 0.2s ease;
+      }
+
+      .destination-item:hover {
+        color: #2563eb;
+        transform: translateX(5px);
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          padding: 20px 15px;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        .sections {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>NexusDMC Email Templates</h1>
+        <p class="subtitle">Email template management system for NexusDMC.</p>
+      </header>
+
+      <div class="sections">
+        <!-- Recent Templates Section -->
+        <div class="section">
+          <h2>Recent Email Templates</h2>
+          <div class="template-grid">
+            <a href="Australia-nexusDMC.html" class="template-item">
+              <div class="template-info">
+                <span class="template-name">Australia-nexusDMC.html</span>
+              </div>
+              <span class="status-badge status-update">Update</span>
+            </a>
+            <a href="Bali-nexusDMC.html" class="template-item">
+              <div class="template-info">
+                <span class="template-name">Bali-nexusDMC.html</span>
+              </div>
+              <span class="status-badge status-update">Update</span>
+            </a>
+            <a href="Europe-nexusDMC.html" class="template-item">
+              <div class="template-info">
+                <span class="template-name">Europe-nexusDMC.html</span>
+              </div>
+              <span class="status-badge status-update">Update</span>
+            </a>
+            <a href="New-Zealand-nexusDMC.html" class="template-item">
+              <div class="template-info">
+                <span class="template-name">New-Zealand-nexusDMC.html</span>
+              </div>
+              <span class="status-badge status-update">Update</span>
+            </a>
+            <a href="Sikkim-nexusDMC.html" class="template-item">
+              <div class="template-info">
+                <span class="template-name">Sikkim-nexusDMC.html</span>
+              </div>
+              <span class="status-badge status-update">Update</span>
+            </a>
+            <a href="Thailand-nexusDMC.html" class="template-item">
+              <div class="template-info">
+                <span class="template-name">Thailand-nexusDMC.html</span>
+              </div>
+              <span class="status-badge status-update">Update</span>
+            </a>
+            <a href="Vietnam-nexusDMC.html" class="template-item">
+              <div class="template-info">
+                <span class="template-name">Vietnam-nexusDMC.html</span>
+              </div>
+              <span class="status-badge status-create">Create</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Destinations Section -->
+      <div class="destinations-section">
+        <h2
+          style="
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 30px;
+            text-align: center;
+          "
+        >
+          Destinations
+        </h2>
+        <div class="destinations-grid">
+          <!-- Asia -->
+          <div class="region-card">
+            <h3>ASIA</h3>
+            <ul class="destination-list">
+              <li>
+                <a href="Azerbaijan-nexusDMC.html" class="destination-item"
+                  >Azerbaijan</a
+                >
+              </li>
+              <li>
+                <a href="Bali-nexusDMC.html" class="destination-item">Bali</a>
+              </li>
+              <li>
+                <a href="Bhutan-nexusDMC.html" class="destination-item"
+                  >Bhutan</a
+                >
+              </li>
+              <li>
+                <a href="Cambodia-nexusDMC.html" class="destination-item"
+                  >Cambodia</a
+                >
+              </li>
+              <li>
+                <a href="Dubai-nexusDMC.html" class="destination-item">Dubai</a>
+              </li>
+              <li>
+                <a href="Hong-Kong-nexusDMC.html" class="destination-item"
+                  >Hong Kong</a
+                >
+              </li>
+              <li>
+                <a href="Japan-nexusDMC.html" class="destination-item">Japan</a>
+              </li>
+              <li>
+                <a href="Malaysia-nexusDMC.html" class="destination-item"
+                  >Malaysia</a
+                >
+              </li>
+              <li>
+                <a href="Maldives-nexusDMC.html" class="destination-item"
+                  >Maldives</a
+                >
+              </li>
+              <li>
+                <a href="Philippines-nexusDMC.html" class="destination-item"
+                  >Philippines</a
+                >
+              </li>
+              <li>
+                <a href="Singapore-nexusDMC.html" class="destination-item"
+                  >Singapore</a
+                >
+              </li>
+              <li>
+                <a href="Sri-Lanka-nexusDMC.html" class="destination-item"
+                  >Sri Lanka</a
+                >
+              </li>
+              <li>
+                <a href="Thailand-nexusDMC.html" class="destination-item"
+                  >Thailand</a
+                >
+              </li>
+              <li>
+                <a href="Turkey-nexusDMC.html" class="destination-item"
+                  >Turkey</a
+                >
+              </li>
+              <li>
+                <a href="Vietnam-nexusDMC.html" class="destination-item"
+                  >Vietnam</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Europe -->
+          <div class="region-card">
+            <h3>EUROPE</h3>
+            <ul class="destination-list">
+              <li>
+                <a href="Europe-nexusDMC.html" class="destination-item"
+                  >Europe</a
+                >
+              </li>
+              <li>
+                <a href="France-nexusDMC.html" class="destination-item"
+                  >France</a
+                >
+              </li>
+              <li>
+                <a href="Greece-nexusDMC.html" class="destination-item"
+                  >Greece</a
+                >
+              </li>
+              <li>
+                <a href="Italy-nexusDMC.html" class="destination-item">Italy</a>
+              </li>
+              <li>
+                <a href="Spain-nexusDMC.html" class="destination-item">Spain</a>
+              </li>
+              <li>
+                <a href="Switzerland-nexusDMC.html" class="destination-item"
+                  >Switzerland</a
+                >
+              </li>
+              <li>
+                <a href="United-Kingdom-nexusDMC.html" class="destination-item"
+                  >United Kingdom</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- India -->
+          <div class="region-card">
+            <h3>INDIA</h3>
+            <ul class="destination-list">
+              <li>
+                <a href="Andamans-nexusDMC.html" class="destination-item"
+                  >Andamans</a
+                >
+              </li>
+              <li>
+                <a href="Goa-nexusDMC.html" class="destination-item">Goa</a>
+              </li>
+              <li>
+                <a
+                  href="Himachal-Pradesh-nexusDMC.html"
+                  class="destination-item"
+                  >Himachal Pradesh</a
+                >
+              </li>
+              <li>
+                <a
+                  href="Jammu-and-Kashmir-nexusDMC.html"
+                  class="destination-item"
+                  >Jammu and Kashmir</a
+                >
+              </li>
+              <li>
+                <a href="Kerala-nexusDMC.html" class="destination-item"
+                  >Kerala</a
+                >
+              </li>
+              <li>
+                <a href="Rajasthan-nexusDMC.html" class="destination-item"
+                  >Rajasthan</a
+                >
+              </li>
+              <li>
+                <a href="Sikkim-nexusDMC.html" class="destination-item"
+                  >Sikkim</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Oceania -->
+          <div class="region-card">
+            <h3>OCEANIA</h3>
+            <ul class="destination-list">
+              <li>
+                <a href="Australia-nexusDMC.html" class="destination-item"
+                  >Australia</a
+                >
+              </li>
+              <li>
+                <a href="New-Zealand-nexusDMC.html" class="destination-item"
+                  >New Zealand</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
