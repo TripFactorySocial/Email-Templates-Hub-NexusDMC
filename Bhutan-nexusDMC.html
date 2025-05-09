@@ -62,101 +62,106 @@
       }
     </style>
 
-    <!-- SECTION Card Css -->
-    <style>
-      .card-col {
-        width: 33.33%;
-        vertical-align: top;
-        padding: 0;
-      }
-      .card-wrapper {
-        padding: 0 5px 20px 5px;
-      }
-
-      .card-container {
-        border: none;
-        overflow: hidden;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-        /* border: 1px solid #0066cc; */
+    <!-- SECTION Card 1x1 Css -->
+    <style type="text/css">
+      /* Card styles */
+      .card {
         background-color: #ffffff;
-        transition: transform 0.3s ease;
+        /* border: 1px solid #c2efff; */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         border-radius: 8px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
       }
 
-      .card-image {
+      /* Card hero image */
+      .card-hero-image {
         width: 100%;
-        height: 160px;
-        object-fit: cover;
+        height: 305px;
         display: block;
-        border: 0;
+        object-fit: cover;
       }
-      .card-title {
-        margin: 0 0 8px 0;
+
+      .card-hero-image--1 {
+        /* FIXME Image 1*/
+        height: 340px !important;
+      }
+
+      .card-hero-image--2 {
+        /* FIXME Image 2*/
+        height: 300px !important;
+      }
+
+      /* Flight inclusive badge */
+      .flight-badge {
+        /* background-color: rgb(232, 44, 1); */
+        /* color: #ffffff; */
+        background-color: #ffb74d;
+        color: #212529;
+        padding: 6px 12px;
+        border-radius: 4px;
         font-size: 12px;
-        font-weight: 800;
-        color: #ffffff;
-        background-color: #e31837;
-        padding: 10px 8px;
+        font-weight: bolder;
+        display: inline-block;
         text-transform: uppercase;
-        letter-spacing: 0.5px;
-        line-height: 1.2;
+        letter-spacing: 0.6px;
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+        white-space: nowrap;
       }
-      .card-content {
-        padding: 0 15px 15px 15px;
-      }
-      .card-details {
-        font-size: 12px;
-        color: #555555;
-        font-weight: 500;
-        margin-bottom: 8px;
+
+      /* Card title styling */
+      .card-title-v1 {
+        color: rgb(43, 67, 104);
+        font-size: 20px;
+        font-weight: bold;
         line-height: 1.3;
       }
-      .card-price {
-        font-size: 20px;
-        font-weight: 800;
+
+      /* Price styling */
+      .price-amount {
         color: #3d8b2d;
-        display: inline-block;
+        font-size: 24px;
+        font-weight: bold;
         line-height: 1.2;
       }
-      .card-button {
-        background-color: #0066cc;
-        /* background-color: #1a3f5a; */
-        color: #ffffff;
-        font-size: 11px;
-        font-weight: 700;
-        text-decoration: none;
-        padding: 10px 0;
-        border-radius: 5px;
-        display: block;
-        text-align: center;
-        width: 100%;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        margin-top: 12px;
-        transition: background-color 0.3s ease;
+
+      /* Location styling */
+      .location-text {
+        color: rgb(26, 108, 154);
+        font-size: 14px;
+        font-weight: 600;
       }
 
-      .download-flyer {
+      /* CTA button styling */
+      .cta-button {
+        background-color: rgb(43, 67, 104) !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        padding: 12px 48px !important;
+        border-radius: 8px !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        display: inline-block !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+      }
+
+      .download-flyer-1 {
         display: inline-block;
         text-align: center;
-        width: 100%;
-        margin-top: 8px;
-        margin-bottom: 0;
+        width: 78%;
+        margin: 8px 0 0 0;
       }
-
-      .download-flyer a {
+      .download-flyer-1 a {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        color: #666666;
+        color: #617e98;
         font-size: 11px;
         font-weight: 600;
         transition: color 0.3s ease;
-      }
-
-      .download-flyer a:hover {
-        color: #0066cc;
       }
 
       .download-icon {
@@ -164,25 +169,6 @@
         height: 14px;
         margin-right: 5px;
         vertical-align: middle;
-      }
-
-      .price-label {
-        font-size: 11px;
-        color: #666666;
-        font-weight: 600;
-        margin: 0;
-      }
-
-      .price-container {
-        margin: 8px 0;
-      }
-
-      .per-person {
-        font-size: 10px;
-        color: #3d8b2d;
-        font-weight: 600;
-        display: block;
-        margin-top: 2px;
       }
     </style>
   </head>
@@ -332,677 +318,615 @@
               <td style="padding: 10px">
                 <div style="text-align: start; color: #666">
                   <!--NOTE [Content area - Cards would go here] -->
-                  <!-- ANCHOR Copy from here -->
+                  <!--ANCHOR [Bhutan Wonders] Card --[1] -->
                   <table
-                    class="package-grid"
-                    cellspacing="0"
                     cellpadding="0"
+                    cellspacing="0"
                     border="0"
                     width="100%"
+                    class="card"
                   >
-                    <!-- ANCHOR Row 1 - start -->
                     <tr>
-                      <!--ANCHOR [Mystical Bhutan] Card --[1] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/destination/74/600x300/3905335-3905334_thimphu-landscape-images_1500x750_0010_bhutan_thimphu_decorative-windowframes-and-shutters-thimphu_istock-1165445839_cr.jpg"
-                                  alt="Mystical Bhutan Image"
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p class="card-title">Mystical Bhutan</p>
-                                <p class="card-details">
-                                  Thimphu 1N, Punakha 1N, Paro 2N
-                                </p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 38,799</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/mystical-bhutan-4028423"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a href="#" download>
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
+                      <!-- Image Column -->
+                      <td width="280" style="padding: 0">
+                        <img
+                          class="card-hero-image card-hero-image--1"
+                          src="https://cdn.yourholiday.me/static/dynimg/itinerary/41/600x300/3924274-3924273_image-25.jpg"
+                          width="280"
+                          height="210"
+                          alt="Bhutan Wonders Background Image"
+                          style="display: block"
+                        />
                       </td>
 
-                      <!--ANCHOR [Bhutan: Dragon's Nest] Card --[2] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/destination/57/600x300/3905089-3905088_paro-landscape-images_1500x750_0004_bhutan_paro_inside-paro-dzong-paro_istock-157316722_credit-stevegeer-on-istock.jpg"
-                                  alt="Bhutan: Dragon's Nest Image"
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p
-                                  class="card-title"
-                                  style="background-color: #c402ba"
-                                >
-                                  Bhutan: Dragon's Nest
-                                </p>
-                                <p class="card-details">Paro 4N</p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 41,499</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/bhutan-dragons-nest-4041220"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a href="#" download>
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
+                      <!-- Content Column -->
+                      <td width="500" style="padding: 8px 20px">
+                        <!-- Title and Flight Badge -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td width="60%" style="vertical-align: middle">
+                              <span class="card-title-v1">Bhutan Wonders</span>
+                            </td>
+                            <td
+                              width="40%"
+                              style="text-align: right; vertical-align: middle"
+                            >
+                              <span class="flight-badge">Flight Inclusive</span>
+                            </td>
+                          </tr>
+                        </table>
 
-                      <!--ANCHOR [Royal Bhutan] Card --[3] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/destination/21/600x300/3905322-3905321_thimphu-landscape-images_1500x750_0005_bhutan_thimphu_capital-city-of-thimphu_istock-1419825442_credit-mtcurado-on-istoc.jpg"
-                                  alt="Royal Bhutan Image"
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p
-                                  class="card-title"
-                                  style="background-color: #006d63"
-                                >
-                                  Royal Bhutan
-                                </p>
-                                <p class="card-details">Thimphu 2N, Paro 2N</p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 39,299</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/royal-bhutan-4042266"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a href="#" download>
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
+                        <!-- Location -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 8px"
+                        >
+                          <tr>
+                            <td>
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding-right: 5px">
+                                    <img
+                                      src="https://img.icons8.com/?size=22&id=85149&format=png&color=2b4368"
+                                      alt="Location Icon"
+                                      width="22"
+                                      height="22"
+                                      style="
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                      "
+                                    />
+                                  </td>
+                                  <td class="location-text">
+                                    Phuntsholing 2N, Thimphu 2N, Paro 2N
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Highlights -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 10px"
+                        >
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              Accommodation in All Places.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              Daily Breakfast & Dinner will be provided.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              All Tours and Transfer are on point yo point
+                              basis.
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Divider -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 10px; margin-bottom: 0"
+                        >
+                          <tr>
+                            <td style="border-top: 2px solid rgb(0, 167, 228)">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Details -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              width="150"
+                              style="
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: rgb(43, 67, 104);
+                                padding-bottom: 12px;
+                              "
+                            >
+                              Departure Months
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 12px;
+                              "
+                            >
+                              : Jun
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="150"
+                              style="
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: rgb(43, 67, 104);
+                                padding-bottom: 12px;
+                                padding-top: 2px;
+                              "
+                            >
+                              Ex-Cities
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 12px;
+                                line-height: 1.2;
+                                padding-top: 8px;
+                              "
+                            >
+                              : Ahmedabad, Bangalore, Chennai, Delhi, Hyderabad,
+                              Kolkata, Mumbai
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Price and Button -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 15px"
+                        >
+                          <tr>
+                            <td
+                              width="50%"
+                              style="
+                                vertical-align: bottom;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      font-size: 14px;
+                                      color: #3d8b2d;
+                                      font-weight: 600;
+                                      padding-bottom: 5px;
+                                    "
+                                  >
+                                    Starting From
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="price-amount">
+                                    ₹ 38,860
+                                    <span style="font-size: 12px"
+                                      >per person</span
                                     >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              width="50%"
+                              style="vertical-align: bottom; text-align: right"
+                            >
+                              <a
+                                href="https://www.nexusdmc.com/package/bhutan-wonders-6424797"
+                                target="_blank"
+                                class="cta-button"
+                                >View Details</a
+                              >
+                              <p class="download-flyer-1">
+                                <a href="#" download>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="download-icon"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                    ></path>
+                                    <polyline
+                                      points="7 10 12 15 17 10"
+                                    ></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                  </svg>
+                                  Download Flyer
+                                </a>
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
                       </td>
                     </tr>
-                    <!-- ANCHOR Row 1 - end -->
-                    <!-- ANCHOR Row 2 - start -->
-                    <tr>
-                      <!--ANCHOR [Trip to Phuntsholing...] Card --[4] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/destination/38/600x300/1662616-1662615_1jpg.jpg"
-                                  alt="Trip to Phuntsholing..."
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p class="card-title">
-                                  Trip to Phuntsholing...
-                                </p>
-                                <p class="card-details">
-                                  Phuntsholing 1N, Thimphu 2N,...
-                                </p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 61,099</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/trip-to-phuntsholing-thimpu--paro-4013634"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a href="#" download>
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
-
-                      <!--ANCHOR [Bhutan Family Package] Card --[5] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/itinerary/7/600x300/1670936-1670935_bhutan-family-package.jpg"
-                                  alt="Bhutan Family Package Image"
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p
-                                  class="card-title"
-                                  style="background-color: #c402ba"
-                                >
-                                  Bhutan Family Package
-                                </p>
-                                <p class="card-details">
-                                  Phuntsholing 1N, Thimphu 2N,...
-                                </p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 28,899</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/bhutan-family-package-41838"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a href="#" download>
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
-
-                      <!--ANCHOR [3 Nights Bhutan Package] Card --[6] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/itinerary/79/600x300/1670922-1670921_3-nights-bhutan-package.jpg"
-                                  alt="3 Nights Bhutan Package Image"
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p
-                                  class="card-title"
-                                  style="background-color: #006d63"
-                                >
-                                  3 Nights Bhutan Package
-                                </p>
-                                <p class="card-details">Thimphu 2N, Paro 1N</p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 11,375</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/3-nights-bhutan-package-41737"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a href="#" download>
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
-                    </tr>
-
-                    <!-- ANCHOR Row 2 - end -->
-                    <!-- ANCHOR Row 3 - start -->
-                    <tr>
-                      <!--ANCHOR [Bhutan 3 Nights Family...] Card --[7] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/itinerary/32/600x300/1670924-1670923_bhutan-3-nights-family-package.jpg"
-                                  alt="Bhutan 3 Nights Family Package Image"
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p class="card-title">Bhutan 3 Nights Family...</p>
-                                <p class="card-details">
-                                  Thimphu 2N, Paro 1N
-                                </p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 12,950</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/bhutan-3-nights-family-package-10347"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a
-                                    href="#"
-                                    download
-                                  >
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
-
-                      <!--ANCHOR [Bhutan 4 Nights Package] Card --[8] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/itinerary/62/600x300/1670928-1670927_bhutan-4-nights-package.jpg"
-                                  alt="Bhutan 4 Nights Package Image"
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p
-                                  class="card-title"
-                                  style="background-color: #c402ba"
-                                >
-                                Bhutan 4 Nights Package                                </p>
-                                <p class="card-details">
-                                  Thimphu 2N, Paro 2N                                </p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 16,599</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/bhutan-4-nights-package-41722"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a
-                                    href="#"
-                                    download
-                                  >
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
-
-                      <!--ANCHOR [4 Nights 5 Days Bhutan...] Card --[9] -->
-                      <td class="card-col">
-                        <div class="card-wrapper">
-                          <table
-                            class="card-container"
-                            width="100%"
-                            border="0"
-                            cellpadding="0"
-                            cellspacing="0"
-                          >
-                            <tr>
-                              <td align="center">
-                                <img
-                                  src="https://cdn.yourholiday.me/static/dynimg/itinerary/31/600x300/1670942-1670941_4-nights-5-days-bhutan-package.jpg"
-                                  alt="4 Nights 5 Days Bhutan Package Image"
-                                  class="card-image"
-                                />
-                              </td>
-                            </tr>
-                            <tr>
-                              <td style="padding: 12px">
-                                <p
-                                  class="card-title"
-                                  style="background-color: #006d63"
-                                >
-                                4 Nights 5 Days Bhutan...                                </p>
-                                <p class="card-details">
-                                  Phuntsholing 1N, Thimphu 2N, Paro 1N                                </p>
-                                <div class="price-container">
-                                  <p class="price-label">Starting From</p>
-                                  <span class="card-price">₹ 22,399</span>
-                                  <span class="per-person">per person</span>
-                                </div>
-                                <a
-                                  href="https://www.nexusdmc.com/package/4-nights-5-days-bhutan-package-41397"
-                                  class="card-button"
-                                  >View Details</a
-                                >
-                                <p class="download-flyer">
-                                  <a
-                                    href="#"
-                                    download
-                                  >
-                                    <svg
-                                      xmlns="http://www.w3.org/2000/svg"
-                                      class="download-icon"
-                                      viewBox="0 0 24 24"
-                                      fill="none"
-                                      stroke="currentColor"
-                                      stroke-width="2"
-                                      stroke-linecap="round"
-                                      stroke-linejoin="round"
-                                    >
-                                      <path
-                                        d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
-                                      ></path>
-                                      <polyline
-                                        points="7 10 12 15 17 10"
-                                      ></polyline>
-                                      <line
-                                        x1="12"
-                                        y1="15"
-                                        x2="12"
-                                        y2="3"
-                                      ></line>
-                                    </svg>
-                                    Download Flyer
-                                  </a>
-                                </p>
-                              </td>
-                            </tr>
-                          </table>
-                        </div>
-                      </td>
-                    </tr>
-                    <!-- ANCHOR Row 3 - end -->
                   </table>
+                  <!-- ANCHOR NEXT CARD -->
+                  <!--ANCHOR [Amazing Bhutan] Card --[2] -->
+                  <table
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                    width="100%"
+                    class="card"
+                  >
+                    <tr>
+                      <!-- Image Column -->
+                      <td width="280" style="padding: 0">
+                        <img
+                          class="card-hero-image card-hero-image--1"
+                          src="https://cdn.yourholiday.me/static/dynimg/itinerary/13/600x300/3922919-3922918_image-24.jpg"
+                          width="280"
+                          height="210"
+                          alt="Amazing Bhutan Background Image"
+                          style="display: block"
+                        />
+                      </td>
+
+                      <!-- Content Column -->
+                      <td width="500" style="padding: 8px 20px">
+                        <!-- Title and Flight Badge -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td width="60%" style="vertical-align: middle">
+                              <span class="card-title-v1">Amazing Bhutan</span>
+                            </td>
+                            <td
+                              width="40%"
+                              style="text-align: right; vertical-align: middle"
+                            >
+                              <span class="flight-badge">Flight Inclusive</span>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Location -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 8px"
+                        >
+                          <tr>
+                            <td>
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding-right: 5px">
+                                    <img
+                                      src="https://img.icons8.com/?size=22&id=85149&format=png&color=2b4368"
+                                      alt="Location Icon"
+                                      width="22"
+                                      height="22"
+                                      style="
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                      "
+                                    />
+                                  </td>
+                                  <td class="location-text">
+                                    Phuntsholing 1N, Thimphu 2N, Punakha 1N,
+                                    Paro 2N, Phunts...
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Highlights -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 10px"
+                        >
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              Accommodation in All Places.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              Daily Breakfast & Dinner will be provided.
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              All Tours and Transfer are on point yo point
+                              basis.
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Divider -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 10px; margin-bottom: 0"
+                        >
+                          <tr>
+                            <td style="border-top: 2px solid rgb(0, 167, 228)">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Details -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              width="150"
+                              style="
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: rgb(43, 67, 104);
+                                padding-bottom: 12px;
+                              "
+                            >
+                              Departure Months
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 12px;
+                              "
+                            >
+                              : Jun
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="150"
+                              style="
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: rgb(43, 67, 104);
+                                padding-bottom: 12px;
+                                padding-top: 2px;
+                              "
+                            >
+                              Ex-Cities
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 12px;
+                                padding-top: 8px;
+                                line-height: 1.2;
+                              "
+                            >
+                              : Ahmedabad, Bangalore, Chennai, Delhi, Hyderabad,
+                              Kolkata, Mumbai
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Price and Button -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 15px"
+                        >
+                          <tr>
+                            <td
+                              width="50%"
+                              style="
+                                vertical-align: bottom;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      font-size: 14px;
+                                      color: #3d8b2d;
+                                      font-weight: 600;
+                                      padding-bottom: 5px;
+                                    "
+                                  >
+                                    Starting From
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="price-amount">
+                                    ₹ 47,399
+                                    <span style="font-size: 12px"
+                                      >per person</span
+                                    >
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              width="50%"
+                              style="vertical-align: bottom; text-align: right"
+                            >
+                              <a
+                                href="https://www.nexusdmc.com/package/amazing-bhutan-6420782"
+                                target="_blank"
+                                class="cta-button"
+                                >View Details</a
+                              >
+                              <p class="download-flyer-1">
+                                <a href="#" download>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="download-icon"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                    ></path>
+                                    <polyline
+                                      points="7 10 12 15 17 10"
+                                    ></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                  </svg>
+                                  Download Flyer
+                                </a>
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- ANCHOR NEXT CARD -->
                 </div>
               </td>
             </tr>
