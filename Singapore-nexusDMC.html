@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel Package Email Template - Outline</title>
+
+    <!-- SECTION Outline Css -->
+    <style type="text/css">
+      /* Reset and Base Styles */
+      body {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        -webkit-text-size-adjust: 100% !important;
+        -ms-text-size-adjust: 100% !important;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #f5f5f5;
+      }
+
+      table {
+        border-spacing: 0 !important;
+        border-collapse: collapse !important;
+        mso-table-lspace: 0pt !important;
+        mso-table-rspace: 0pt !important;
+      }
+
+      img {
+        -ms-interpolation-mode: bicubic;
+        border: 0;
+        height: auto;
+        line-height: 100%;
+        outline: none;
+        text-decoration: none;
+        display: block;
+      }
+
+      /* Outlook link fix */
+      #outlook a {
+        padding: 0;
+      }
+
+      /* iOS BLUE LINKS */
+      a[x-apple-data-detectors] {
+        color: inherit !important;
+        text-decoration: none !important;
+        font-size: inherit !important;
+        font-family: inherit !important;
+        font-weight: inherit !important;
+        line-height: inherit !important;
+      }
+
+      /* Gmail blue links */
+      u + #body a {
+        color: inherit;
+        text-decoration: none;
+        font-size: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        line-height: inherit;
+      }
+    </style>
+
+    <!-- SECTION Card 1x1 Css -->
+    <style type="text/css">
+      /* Card styles */
+      .card {
+        background-color: #ffffff;
+        /* border: 1px solid #c2efff; */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        margin-bottom: 12px;
+        overflow: hidden;
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+      }
+
+      /* Card hero image */
+      .card-hero-image {
+        width: 100%;
+        height: 305px;
+        display: block;
+        object-fit: cover;
+      }
+
+      .card-hero-image--1 {
+        /* FIXME Image 1*/
+        height: 342px !important;
+      }
+
+      .card-hero-image--2 {
+        /* FIXME Image 2*/
+        height: 342px !important;
+      }
+
+      /* Flight inclusive badge */
+      .flight-badge {
+        /* background-color: rgb(232, 44, 1); */
+        /* color: #ffffff; */
+        background-color: #ffb74d;
+        color: #212529;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 12px;
+        font-weight: bolder;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+        /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+        white-space: nowrap;
+      }
+
+      /* Card title styling */
+      .card-title-v1 {
+        color: rgb(43, 67, 104);
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 1.3;
+      }
+
+      /* Price styling */
+      .price-amount {
+        color: #3d8b2d;
+        font-size: 24px;
+        font-weight: bold;
+        line-height: 1.2;
+      }
+
+      /* Location styling */
+      .location-text {
+        color: rgb(26, 108, 154);
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      /* CTA button styling */
+      .cta-button {
+        background-color: rgb(43, 67, 104) !important;
+        color: #ffffff !important;
+        text-decoration: none !important;
+        padding: 12px 48px !important;
+        border-radius: 8px !important;
+        font-size: 12px !important;
+        font-weight: bold !important;
+        display: inline-block !important;
+        text-transform: uppercase !important;
+        letter-spacing: 0.5px !important;
+      }
+
+      .download-flyer-1 {
+        display: inline-block;
+        text-align: center;
+        width: 78%;
+        margin: 8px 0 0 0;
+      }
+      .download-flyer-1 a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #617e98;
+        font-size: 11px;
+        font-weight: 600;
+        transition: color 0.3s ease;
+      }
+
+      .download-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+        vertical-align: middle;
+      }
+    </style>
+  </head>
+  <body>
+    <!--SECTION Main wrapper -->
+    <table
+      cellpadding="0"
+      cellspacing="0"
+      border="0"
+      width="100%"
+      style="width: 100%; background-color: #f5f5f5"
+    >
+      <tr>
+        <td align="center">
+          <!-- Container table with fixed width -->
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            width="800"
+            style="width: 800px; max-width: 800px; background-color: #ffffff"
+          >
+            <!--SECTION HEADER -->
+            <tr>
+              <td style="padding: 20px 0 0 0">
+                <!-- Logo and Contact Info Row -->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <!-- Logo cell -->
+                    <td width="33%" style="padding-left: 24px">
+                      <a href="https://www.nexusdmc.com/" target="_blank">
+                        <img
+                          src="https://cdn.yourholiday.me/static/dynimg/partner/98/300x150/3182372-3182371_nexusdmc_hrz_blk.png"
+                          alt="NexusDMC Logo"
+                          width="200"
+                          style="display: block"
+                        />
+                      </a>
+                    </td>
+
+                    <!-- Spacer -->
+                    <td width="34%">&nbsp;</td>
+
+                    <!-- Contact Info cell -->
+                    <td width="33%" style="padding-right: 24px">
+                      <!--ANCHOR Phone table -->
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        align="right"
+                        style="margin-bottom: 10px"
+                      >
+                        <tr>
+                          <td style="padding-right: 5px">
+                            <img
+                              src="https://img.icons8.com/?size=20&id=9730&format=png&color=2b4368"
+                              alt="Phone Icon"
+                              width="20"
+                              height="20"
+                              style="display: block"
+                            />
+                          </td>
+                          <td>
+                            <a
+                              href="tel:08047104721"
+                              style="
+                                font-family: Century Gothic, Arial, sans-serif;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: #2b4368;
+                                text-decoration: none;
+                              "
+                              >080 4710 4721</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+
+                      <!--ANCHOR Email table -->
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        align="right"
+                        style="clear: right"
+                      >
+                        <tr>
+                          <td style="padding-right: 5px">
+                            <img
+                              src="https://img.icons8.com/?size=20&id=499&format=png&color=2b4368"
+                              alt="Email Icon"
+                              width="20"
+                              height="20"
+                              style="display: block"
+                            />
+                          </td>
+                          <td>
+                            <a
+                              href="mailto:b2bsupport@nexusdmc.com"
+                              style="
+                                font-family: Century Gothic, Arial, sans-serif;
+                                font-size: 16px;
+                                font-weight: bold;
+                                color: #2b4368;
+                                text-decoration: none;
+                              "
+                              >b2bsupport@nexusdmc.com</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!--SECTION BANNER HEADING -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  width="100%"
+                  style="background-color: #2b4368; margin-top: 15px"
+                >
+                  <tr>
+                    <td style="padding: 20px 40px; text-align: center">
+                      <h1
+                        style="
+                          color: #ffffff;
+                          font-family: Century Gothic, Arial, sans-serif;
+                          font-size: 22px;
+                          font-weight: bold;
+                          margin: 0;
+                          text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+                        "
+                      >
+                        NexusDMC Singapore Fixed Departures with Flight
+                      </h1>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+
+            <!--SECTION CONTENT AREA (PLACEHOLDER) -->
+            <tr>
+              <td style="padding: 12px">
+                <div style="text-align: start; color: #666">
+                  <!--NOTE [Content area - Cards would go here] -->
+                  <!--ANCHOR [Unbelievable Singapore and Malaysia] Card --[1] -->
+                  <table
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                    width="100%"
+                    class="card"
+                  >
+                    <tr>
+                      <!-- Image Column -->
+                      <td width="280" style="padding: 0">
+                        <img
+                          class="card-hero-image card-hero-image--1"
+                          src="https://cdn.yourholiday.me/static/dynimg/itinerary/1/600x300/3640718-3640717_singapore_holiday.jpg"
+                          width="280"
+                          height="210"
+                          alt="Unbelievable Singapore and Malaysia Background Image"
+                          style="display: block"
+                        />
+                      </td>
+
+                      <!-- Content Column -->
+                      <td width="500" style="padding: 8px 20px">
+                        <!-- Title and Flight Badge -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td width="60%" style="vertical-align: middle">
+                              <span class="card-title-v1"
+                                >Unbelievable Singapore and Malaysia</span
+                              >
+                            </td>
+                            <td
+                              width="40%"
+                              style="text-align: right; vertical-align: middle"
+                            >
+                              <span class="flight-badge">Flight Inclusive</span>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Location -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 8px"
+                        >
+                          <tr>
+                            <td>
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding-right: 5px">
+                                    <img
+                                      src="https://img.icons8.com/?size=22&id=85149&format=png&color=2b4368"
+                                      alt="Location Icon"
+                                      width="22"
+                                      height="22"
+                                      style="
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                      "
+                                    />
+                                  </td>
+                                  <td class="location-text">
+                                    Singapore 3N, Kuala Lumpur 3N
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Highlights -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 10px"
+                        >
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              Return Economy Class Airfare (up to 1 stopover)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              06 nights’ accommodation in Singapore and Malaysia
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              Private Transfer from the Singapore Airport to the
+                              Hotel
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Divider -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 10px; margin-bottom: 0"
+                        >
+                          <tr>
+                            <td style="border-top: 2px solid rgb(0, 167, 228)">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Details -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              width="150"
+                              style="
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: rgb(43, 67, 104);
+                                padding-bottom: 12px;
+                              "
+                            >
+                              Departure Months
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 12px;
+                              "
+                            >
+                              : May,Jun, Jul, Aug, Sep
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="150"
+                              style="
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: rgb(43, 67, 104);
+                                padding-bottom: 12px;
+                                padding-top: 2px;
+                              "
+                            >
+                              Ex-Cities
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 12px;
+                                line-height: 1.2;
+                                padding-top: 8px;
+                                padding-top: 2px;
+                              "
+                            >
+                              : Bangalore, Hyderabad, Chennai, Delhi, Mumbai
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Price and Button -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 15px"
+                        >
+                          <tr>
+                            <td
+                              width="50%"
+                              style="
+                                vertical-align: bottom;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      font-size: 14px;
+                                      color: #3d8b2d;
+                                      font-weight: 600;
+                                      padding-bottom: 5px;
+                                    "
+                                  >
+                                    Starting From
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="price-amount">
+                                    ₹ 117,699
+                                    <span style="font-size: 12px"
+                                      >per person</span
+                                    >
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              width="50%"
+                              style="vertical-align: bottom; text-align: right"
+                            >
+                              <a
+                                href="https://www.nexusdmc.com/package/unbelievable-singapore-and-malaysia-3560248"
+                                target="_blank"
+                                class="cta-button"
+                                >View Details</a
+                              >
+                              <p class="download-flyer-1">
+                                <a href="#" download>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="download-icon"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                    ></path>
+                                    <polyline
+                                      points="7 10 12 15 17 10"
+                                    ></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                  </svg>
+                                  Download Flyer
+                                </a>
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- ANCHOR NEXT CARD -->
+                  <!--ANCHOR [Asian Extravaganza] Card --[2] -->
+                  <table
+                    cellpadding="0"
+                    cellspacing="0"
+                    border="0"
+                    width="100%"
+                    class="card"
+                  >
+                    <tr>
+                      <!-- Image Column -->
+                      <td width="280" style="padding: 0">
+                        <img
+                          class="card-hero-image card-hero-image--1"
+                          src="https://cdn.yourholiday.me/static/dynimg/itinerary/59/600x300/3511324-3511323_istock-1014582602.jpg"
+                          width="280"
+                          height="210"
+                          alt="Asian Extravaganza Background Image"
+                          style="display: block"
+                        />
+                      </td>
+
+                      <!-- Content Column -->
+                      <td width="500" style="padding: 8px 20px">
+                        <!-- Title and Flight Badge -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td width="60%" style="vertical-align: middle">
+                              <span class="card-title-v1"
+                                >Asian Extravaganza</span
+                              >
+                            </td>
+                            <td
+                              width="40%"
+                              style="text-align: right; vertical-align: middle"
+                            >
+                              <span class="flight-badge">Flight Inclusive</span>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Location -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 8px"
+                        >
+                          <tr>
+                            <td>
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td style="padding-right: 5px">
+                                    <img
+                                      src="https://img.icons8.com/?size=22&id=85149&format=png&color=2b4368"
+                                      alt="Location Icon"
+                                      width="22"
+                                      height="22"
+                                      style="
+                                        display: inline-block;
+                                        vertical-align: middle;
+                                      "
+                                    />
+                                  </td>
+                                  <td class="location-text">
+                                    Singapore 3N, Kuala Lumpur 3N, Pattaya 2N,
+                                    Bangkok 2N
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Highlights -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 10px"
+                        >
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              Return Economy Class Airfare (upto 1 stop over)
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              Internal flight from Kuala Lumpur to Bangkok
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="20"
+                              style="
+                                vertical-align: top;
+                                color: rgb(115, 204, 98);
+                                font-size: 18px;
+                                padding-right: 5px;
+                              "
+                            >
+                              ✓
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 4px;
+                              "
+                            >
+                              10 Night’ Accommodation in All 4 Places
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Divider -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 10px; margin-bottom: 0"
+                        >
+                          <tr>
+                            <td style="border-top: 2px solid rgb(0, 167, 228)">
+                              &nbsp;
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Details -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                        >
+                          <tr>
+                            <td
+                              width="150"
+                              style="
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: rgb(43, 67, 104);
+                                padding-bottom: 12px;
+                              "
+                            >
+                              Departure Months
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 12px;
+                              "
+                            >
+                              : May, Jun, Jul, Aug
+                            </td>
+                          </tr>
+                          <tr>
+                            <td
+                              width="150"
+                              style="
+                                font-weight: bold;
+                                font-size: 14px;
+                                color: rgb(43, 67, 104);
+                                padding-bottom: 12px;
+                                padding-top: 2px;
+                              "
+                            >
+                              Ex-Cities
+                            </td>
+                            <td
+                              style="
+                                font-size: 14px;
+                                color: #384f56;
+                                padding-bottom: 12px;
+                                padding-top: 8px;
+                                /* padding-top: 2px; */
+                                line-height: 1.2;
+                              "
+                            >
+                              : Bangalore, Hyderabad, Chennai, Ahmedabad,
+                              Mumbai, Delhi
+                            </td>
+                          </tr>
+                        </table>
+
+                        <!-- Price and Button -->
+                        <table
+                          cellpadding="0"
+                          cellspacing="0"
+                          border="0"
+                          width="100%"
+                          style="margin-top: 15px"
+                        >
+                          <tr>
+                            <td
+                              width="50%"
+                              style="
+                                vertical-align: bottom;
+                                padding-bottom: 5px;
+                              "
+                            >
+                              <table cellpadding="0" cellspacing="0" border="0">
+                                <tr>
+                                  <td
+                                    style="
+                                      font-size: 14px;
+                                      color: #3d8b2d;
+                                      font-weight: 600;
+                                      padding-bottom: 5px;
+                                    "
+                                  >
+                                    Starting From
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td class="price-amount">
+                                    ₹ 47,399
+                                    <span style="font-size: 12px"
+                                      >per person</span
+                                    >
+                                  </td>
+                                </tr>
+                              </table>
+                            </td>
+                            <td
+                              width="50%"
+                              style="vertical-align: bottom; text-align: right"
+                            >
+                              <a
+                                href="https://www.nexusdmc.com/package/asian-extravaganza-4135737"
+                                target="_blank"
+                                class="cta-button"
+                                >View Details</a
+                              >
+                              <p class="download-flyer-1">
+                                <a href="#" download>
+                                  <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    class="download-icon"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    stroke-width="2"
+                                    stroke-linecap="round"
+                                    stroke-linejoin="round"
+                                  >
+                                    <path
+                                      d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
+                                    ></path>
+                                    <polyline
+                                      points="7 10 12 15 17 10"
+                                    ></polyline>
+                                    <line x1="12" y1="15" x2="12" y2="3"></line>
+                                  </svg>
+                                  Download Flyer
+                                </a>
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </td>
+                    </tr>
+                  </table>
+                  <!-- ANCHOR NEXT CARD -->
+                </div>
+              </td>
+            </tr>
+
+            <!--SECTION FOOTER -->
+            <tr>
+              <td>
+                <!-- Yellow Contact Bar -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  width="100%"
+                  style="background-color: #f7e90d; margin-bottom: 4px"
+                >
+                  <tr>
+                    <td style="padding: 10px 0">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        width="100%"
+                      >
+                        <tr>
+                          <td style="text-align: center; padding-left: 32px">
+                            <!-- Email -->
+                            <span
+                              style="
+                                display: inline-block;
+                                vertical-align: middle;
+                              "
+                            >
+                              <span
+                                style="
+                                  display: inline-block;
+                                  background-color: #ff0000;
+                                  padding: 2px;
+                                  border-radius: 4px;
+                                  vertical-align: middle;
+                                  margin-right: 4px;
+                                "
+                              >
+                                <img
+                                  src="https://img.icons8.com/?size=100&id=59835&format=png&color=FFFFFF"
+                                  alt="Email Icon"
+                                  width="18"
+                                  height="18"
+                                  style="display: block"
+                                />
+                              </span>
+                              <a
+                                href="mailto:b2bsupport@nexusdmc.com"
+                                style="
+                                  font-family: open-sans, Arial, sans-serif;
+                                  font-size: 16px;
+                                  color: #000000;
+                                  vertical-align: middle;
+                                  text-decoration: none;
+                                  font-weight: bold;
+                                  display: inline-block;
+                                  margin-top: 3px;
+                                "
+                                >b2bsupport@nexusdmc.com</a
+                              >
+                            </span>
+                            <!-- Phone -->
+                            <span
+                              style="
+                                display: inline-block;
+                                margin-right: 40px;
+                                vertical-align: middle;
+                              "
+                            >
+                              <span
+                                style="
+                                  display: inline-block;
+                                  background-color: #ff0000;
+                                  padding: 2px;
+                                  border-radius: 4px;
+                                  vertical-align: middle;
+                                  margin-right: 4px;
+                                  margin-left: 36px;
+                                "
+                              >
+                                <img
+                                  src="https://img.icons8.com/?size=24&id=9730&format=png&color=ffffff"
+                                  alt="Phone Icon"
+                                  width="16"
+                                  height="16"
+                                  style="display: block"
+                                />
+                              </span>
+                              <a
+                                href="tel:08047104721"
+                                style="
+                                  font-family: open-sans, Arial, sans-serif;
+                                  font-size: 16px;
+                                  color: #000000;
+                                  vertical-align: middle;
+                                  text-decoration: none;
+                                  font-weight: bold;
+                                  display: inline-block;
+                                  margin-top: 3px;
+                                "
+                                >080 4710 4721</a
+                              >
+                            </span>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Blue Create Quote Section -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  width="100%"
+                  style="background-color: #1a3f5a"
+                >
+                  <tr>
+                    <td style="padding: 16px 0; text-align: center">
+                      <p
+                        style="
+                          margin: 0;
+                          font-family: open-sans, Arial, sans-serif;
+                          font-size: 24px;
+                          color: #ffffff;
+                          font-weight: normal;
+                        "
+                      >
+                        <span
+                          style="
+                            color: #8296bb;
+                            font-family: open-sans, Arial, sans-serif;
+                          "
+                          >Create Quote Online :</span
+                        >
+                        <a
+                          href="https://www.nexusdmc.com/"
+                          target="_blank"
+                          style="text-decoration: none"
+                        >
+                          <span
+                            style="
+                              color: #ffffff;
+                              font-family: open-sans, Arial, sans-serif;
+                              font-weight: bold;
+                            "
+                            >www.nexusdmc.com</span
+                          ></a
+                        >
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- 4 Colored Border Section -->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td style="padding: 0; background-color: #1a3f5a">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        width="32%"
+                        style="margin: 0 auto"
+                      >
+                        <tr>
+                          <td
+                            style="
+                              width: 25%;
+                              height: 1.5px;
+                              background-color: #00a0e3;
+                            "
+                          ></td>
+                          <td
+                            style="
+                              width: 25%;
+                              height: 1.5px;
+                              background-color: #8dc63f;
+                            "
+                          ></td>
+                          <td
+                            style="
+                              width: 25%;
+                              height: 1.5px;
+                              background-color: #ffd700;
+                            "
+                          ></td>
+                          <td
+                            style="
+                              width: 25%;
+                              height: 1.5px;
+                              background-color: #f15a29;
+                            "
+                          ></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- 4 Colored Border Section -->
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td style="padding: 0">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        width="32%"
+                        style="margin: 0 auto"
+                      >
+                        <tr>
+                          <td
+                            style="
+                              width: 25%;
+                              height: 1.5px;
+                              background-color: #00a0e3;
+                            "
+                          ></td>
+                          <td
+                            style="
+                              width: 25%;
+                              height: 1.5px;
+                              background-color: #8dc63f;
+                            "
+                          ></td>
+                          <td
+                            style="
+                              width: 25%;
+                              height: 1.5px;
+                              background-color: #ffd700;
+                            "
+                          ></td>
+                          <td
+                            style="
+                              width: 25%;
+                              height: 1.5px;
+                              background-color: #f15a29;
+                            "
+                          ></td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+
+                <!-- Bottom Section with Unsubscribe and Social Media -->
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  width="100%"
+                  style="background-color: #ffffff"
+                >
+                  <tr>
+                    <td style="padding: 15px 25px">
+                      <table
+                        cellpadding="0"
+                        cellspacing="0"
+                        border="0"
+                        width="100%"
+                      >
+                        <tr>
+                          <!-- Center Aligned Unsubscribe Text -->
+                          <td style="width: 88%">
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              width="100%"
+                            >
+                              <tr>
+                                <td
+                                  style="text-align: center; padding-left: 96px"
+                                >
+                                  <p
+                                    style="
+                                      margin: 0;
+                                      font-family: open-sans, Arial, sans-serif;
+                                      font-size: 12px;
+                                      color: #ced4da;
+                                    "
+                                  >
+                                    You're receiving this email because you
+                                    signed up for updates from NexusDMC.
+                                  </p>
+                                  <p
+                                    style="
+                                      margin: 5px 0 0 0;
+                                      font-family: open-sans, Arial, sans-serif;
+                                      font-size: 12px;
+                                      color: #ced4da;
+                                    "
+                                  >
+                                    <a
+                                      href="#"
+                                      style="
+                                        color: #ced4da;
+                                        text-decoration: underline;
+                                        padding-right: 2px;
+                                      "
+                                      >Unsubscribe</a
+                                    >
+                                    |
+                                    <a
+                                      href="#"
+                                      style="
+                                        color: #ced4da;
+                                        text-decoration: underline;
+                                        padding-left: 2px;
+                                      "
+                                      >View in Browser</a
+                                    >
+                                  </p>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+
+                          <!-- Right Aligned Social Media Icons -->
+                          <td
+                            style="
+                              width: 30%;
+                              text-align: right;
+                              vertical-align: middle;
+                            "
+                          >
+                            <table
+                              cellpadding="0"
+                              cellspacing="0"
+                              border="0"
+                              align="right"
+                            >
+                              <tr>
+                                <td>
+                                  <a
+                                    href="https://www.facebook.com/NexusDMC"
+                                    style="text-decoration: none"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      src="https://img.icons8.com/?size=100&id=LL0Q6sp9VyLo&format=png&color=ced4da"
+                                      alt="Facebook Icon"
+                                      width="22"
+                                      height="22"
+                                      style="display: block"
+                                    />
+                                  </a>
+                                </td>
+                                <td style="padding-left: 6px">
+                                  <a
+                                    href="https://in.linkedin.com/company/nexus-dmc"
+                                    style="text-decoration: none"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      src="https://img.icons8.com/?size=100&id=8808&format=png&color=ced4da"
+                                      alt="LinkedIn Icon"
+                                      width="20"
+                                      height="20"
+                                      style="display: block"
+                                    />
+                                  </a>
+                                </td>
+                                <td style="padding-left: 6px">
+                                  <a
+                                    href="https://www.youtube.com/@NexusDMC_"
+                                    style="text-decoration: none"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      src="https://img.icons8.com/?size=100&id=55200&format=png&color=ced4da"
+                                      alt="YouTube Icon"
+                                      width="20"
+                                      height="20"
+                                      style="display: block"
+                                    />
+                                  </a>
+                                </td>
+                                <td style="padding-left: 6px">
+                                  <a
+                                    href="https://www.instagram.com/nexus_dmc_official"
+                                    style="text-decoration: none"
+                                    target="_blank"
+                                  >
+                                    <img
+                                      src="https://img.icons8.com/?size=100&id=32309&format=png&color=ced4da"
+                                      alt="Instagram Icon"
+                                      width="20"
+                                      height="20"
+                                      style="display: block"
+                                    />
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
