@@ -20,27 +20,6 @@ Designed for **simplicity, speed, and scale**.
 
 ---
 
-## 🧱 Folder Structure
-
-Email-Templates-Hub-NexusDMC/
-├── base/ # Reusable HTML structures and design references
-│ ├── cards-1x1-v1.html
-│ ├── cards-grid-3x3.html
-│ ├── cards-grid-3x3-v2.html
-│ └── outline.html
-
-├── public/ # Final email templates categorized by destination
-│ ├── Thailand-nexusDMC.html
-│ ├── Switzerland-nexusDMC.html
-│ ├── Italy-nexusDMC.html
-│ └── ... (many more templates)
-
-├── index.html # Homepage UI with all template links
-├── 404.html # Fallback for broken URLs
-└── README.md
-
----
-
 ## 🧭 How to Use
 
 1. **Go to the hub:**  
